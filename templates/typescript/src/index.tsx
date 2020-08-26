@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'antd';
+import { Button } from 'antd';
 import './index.less';
 
 function App() {
@@ -18,9 +18,10 @@ function App() {
   );
 }
 
+ReactDOM.render(<App />, document.getElementById('root'));
+
 // 模块热更新
 if (module.hot) {
   module.hot.accept();
 }
 
-ReactDOM.render(App, document.getElementById('root'));
