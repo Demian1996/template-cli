@@ -1,0 +1,6 @@
+node_modules
+logs
+run
+.DS_Store
+**/*/.DS_Store
+dist
