@@ -1,0 +1,20 @@
+{
+  "name": "template-react-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tpl-rc": "tpl-rc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "tpl-rc": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^6.0.0",
+    "fs-extra": "^9.0.1"
+  }
+}
