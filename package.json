@@ -1,17 +1,17 @@
 {
-  "name": "template-react-cli",
+  "name": "template-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "个人用，模板生成工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tpl-rc": "tpl-rc"
+    "tpl": "tpl"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bin": {
-    "tpl-rc": "./index.js"
+    "tpl": "./index.js"
   },
   "dependencies": {
     "commander": "^6.0.0",

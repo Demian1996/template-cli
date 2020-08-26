@@ -16,7 +16,7 @@ let projectName = 'project';
  */
 function output(name) {
   projectName = name;
-  console.log('正在创建项目：', name);
+  console.log('创建项目：', name);
 }
 
 /**
@@ -36,7 +36,7 @@ function generateTemplate(template) {
   // 拷贝生成模板
   copyAllFiles(srcPath, targetPath);
   // 写入package.json
-  // injectJson(path.resolve(targetPath), { name: projectName });
+  injectJson(path.resolve(targetPath, './package.json'), { name: projectName });
 }
 
 program
@@ -47,7 +47,7 @@ program
 program.on('--help', function () {
   console.log(`
 Examples:
-  tpl-rc -t ts
+  tpl-rc -p rc-demo -t ts
 `);
 });
 
