@@ -35,7 +35,7 @@ tpl -p react-demo -t ts
 
 运行成功后会在命令运行目录下生成文件夹 react-demo。
 
-目前仅有两个参数，后续增加参数介绍如下：
+目前仅有两个参数，详细描述如下：
 
 -p --project 项目名，会将该字段手动填充到模板文件的 package.json 中
 
