@@ -2,15 +2,19 @@
 
 个人用，类似 create-react-app，开发小项目和三方包时便于复用项目模板。不用 cra 是因为想要自定义 eslint 和 jest，而且不需要每次都要装 less 之类的东西。
 
-目前仅提供 ts 模板（ts 就是王道~）
+目前提供模板如下：
 
-集成：
+- rc-ts（react-component-typescript）
+  特性：
+  - 集成 antd、react-css-modules、less、typescript、babel
+  - 使用 webpack 打包
+- lib-ts（library-typescript）
+  特性：
+  - 支持 esm、cjs、umd 等形式
+  - 集成 typescript、babel
+  - 使用 rollup 打包
 
-- antd
-- react-css-modules
-- less
-
-## 使用
+## 使用（以开发react组件为例）
 
 ### 一、安装本地命令
 
@@ -28,10 +32,10 @@ tpl -v // 若此时显示版本号，则安装成功
 
 命令安装成功后，可在任意目录下生成模板。
 
-例如生成项目 react-demo，使用 ts 模板：
+例如生成项目 react-component-demo，使用 rc-ts 模板：
 
 ```shell
-tpl -p react-demo -t ts
+tpl -p react-demo -t rc-ts
 ```
 
 运行成功后会在命令运行目录下生成文件夹 react-demo。
@@ -47,7 +51,7 @@ tpl -p react-demo -t ts
 -t --template 模板名，用简称表示对应 templates 下各模板文件的文件夹名
 
 ```shell
--t ts
+-t rc-ts
 ```
 
 ### 三、启动模板项目
