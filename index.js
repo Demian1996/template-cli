@@ -17,6 +17,7 @@ let projectName = 'project';
  */
 function output(name) {
   projectName = name;
+  console.log('创建项目：', name);
 }
 
 /**
@@ -24,6 +25,8 @@ function output(name) {
  */
 function generateTemplate(template) {
   if (!templateMap[template]) {
+    console.log('模板输入错误!');
+    console.log('可用模板如下：', Object.keys(templateMap).join('/'));
     return;
   }
 
