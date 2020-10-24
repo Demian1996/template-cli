@@ -1,4 +1,7 @@
 import pkg from '../package.json';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+
 const makeExternalPredicate = (externalArr) => {
   if (externalArr.length === 0) {
     return () => false;
@@ -13,4 +16,11 @@ export default {
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {}),
   ]),
+  inlineDynamicImports: true,
+  plugins: [
+    nodeResolve({
+      extensions: ['.js', '.ts'],
+    }),
+    commonjs(),
+  ],
 };
