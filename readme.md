@@ -19,7 +19,7 @@
 ### 一、安装本地命令
 
 ```shell
-git clone git@github.com:Demian1996/template-cli.git
+git clone https://github.com/Demian1996/template-cli.git
 cd template-cli/
 npm install // 安装commander等依赖
 npm link // 将tpl作为全局命令
