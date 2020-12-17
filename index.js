@@ -48,8 +48,8 @@ function handlePackageJSON({ targetPath, projectName, template }) {
     case 'rc-ts': {
       return injectJson(path.resolve(targetPath, './package.json'), {
         name: projectName,
-        main: `dist/${projectName}.js`,
-        module: `dist/${projectName}.js`,
+        main: `dist/index.js`,
+        module: `dist/index.js`,
         types: 'types/index.d.ts',
       });
     }

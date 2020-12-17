@@ -1,13 +1,12 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 const path = require('path');
-const pkg = require('../package.json');
 // const webpack = require('webpack');
 
 module.exports = merge(common, {
   entry: path.resolve(__dirname, '../src/index.tsx'),
   output: {
-    filename: `${pkg.name}.js`,
+    filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
     libraryTarget: 'umd',
   },
