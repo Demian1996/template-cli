@@ -8,13 +8,17 @@
   特性：
   - 集成 antd、react-css-modules、less、typescript、babel
   - 使用 webpack 打包
+- rc-ts (react-component-typescript)
+  特性：
+  - 集成 antd、react-css-modules、less、typescript、babel
+  - 使用 webpack 打包，支持通过运行 example 预览组件最终效果
 - lib-ts（library-typescript）
   特性：
   - 支持 esm、cjs、umd 等形式
   - 集成 typescript、babel
   - 使用 rollup 打包
 
-## 使用（以开发react组件为例）
+## 使用（以开发 react 组件为例）
 
 ### 一、安装本地命令
 
