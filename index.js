@@ -2,7 +2,6 @@
 const program = require('commander');
 const { copyAllFiles, injectJson, mkdirSync } = require('./lib/copy');
 const path = require('path');
-const fse = require;
 
 const templateMap = {
   'rc-ts': 'react-component-typescript',
@@ -46,6 +45,14 @@ function handlePackageJSON({ targetPath, projectName, template }) {
     case 'rw-ts': {
       return injectJson(path.resolve(targetPath, './package.json'), { name: projectName });
     }
+    case 'rc-ts': {
+      return injectJson(path.resolve(targetPath, './package.json'), {
+        name: projectName,
+        main: `dist/${projectName}.js`,
+        module: `dist/${projectName}.js`,
+        types: 'types/index.d.ts',
+      });
+    }
     case 'lib-ts': {
       return injectJson(path.resolve(targetPath, './package.json'), {
         name: projectName,
@@ -67,6 +74,8 @@ program.on('--help', function () {
   console.log(`
 React Web Example:
   tpl -p rw-demo -t rw-ts
+React Component Example:
+  tpl -p rc-demo -t rc-ts
 Library Example:
   tpl -p lib-demo -t lib-ts
 `);
