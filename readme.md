@@ -4,7 +4,7 @@
 
 目前提供模板如下：
 
-- rc-ts（react-component-typescript）
+- rw-ts（react-web-typescript）
   特性：
   - 集成 antd、react-css-modules、less、typescript、babel
   - 使用 webpack 打包
@@ -32,10 +32,10 @@ tpl -v // 若此时显示版本号，则安装成功
 
 命令安装成功后，可在任意目录下生成模板。
 
-例如生成项目 react-component-demo，使用 rc-ts 模板：
+例如生成项目 react-web-demo，使用 rw-ts 模板：
 
 ```shell
-tpl -p react-demo -t rc-ts
+tpl -p react-demo -t rw-ts
 ```
 
 运行成功后会在命令运行目录下生成文件夹 react-demo。
@@ -51,7 +51,7 @@ tpl -p react-demo -t rc-ts
 -t --template 模板名，用简称表示对应 templates 下各模板文件的文件夹名
 
 ```shell
--t rc-ts
+-t rw-ts
 ```
 
 ### 三、启动模板项目

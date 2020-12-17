@@ -6,6 +6,7 @@ const fse = require;
 
 const templateMap = {
   'rc-ts': 'react-component-typescript',
+  'rw-ts': 'react-web-typescript',
   'lib-ts': 'library-typescript',
 };
 
@@ -42,7 +43,7 @@ function generateTemplate(template) {
 
 function handlePackageJSON({ targetPath, projectName, template }) {
   switch (template) {
-    case 'rc-ts': {
+    case 'rw-ts': {
       return injectJson(path.resolve(targetPath, './package.json'), { name: projectName });
     }
     case 'lib-ts': {
@@ -60,14 +61,14 @@ function handlePackageJSON({ targetPath, projectName, template }) {
 program
   .version('1.0.0', '-v, --version')
   .option('-p, --project <projectName>', 'new Project', output)
-  .option('-t, --template <templateName>', 'use template: rc-ts', generateTemplate);
+  .option('-t, --template <templateName>', 'use template: rw-ts', generateTemplate);
 
 program.on('--help', function () {
   console.log(`
-React Component Example:
-  tpl-rc -p rc-demo -t rc-ts
+React Web Example:
+  tpl -p rw-demo -t rw-ts
 Library Example:
-  tpl-rc -p lib-demo -t lib-ts
+  tpl -p lib-demo -t lib-ts
 `);
 });
 
