@@ -1,6 +1,6 @@
 # 脚手架
 
-个人用，类似 create-react-app，开发小项目和三方包时便于复用项目模板。不用 cra 是因为想要自定义 eslint 和 jest，而且不需要每次都要装 less 之类的东西。
+简单的模板生成器，目前支持项目模板和 markdown 模板两类
 
 目前提供模板如下：
 
@@ -17,6 +17,7 @@
   - 支持 esm、cjs、umd 等形式
   - 集成 typescript、babel
   - 使用 rollup 打包
+- markdowns: markdown 模板
 
 ## 使用（以开发 react 组件为例）
 
