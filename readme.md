@@ -1,6 +1,6 @@
 # 脚手架
 
-简单的模板生成器，目前支持项目模板和 markdown 模板两类
+简单的模板生成器，目前支持 project 模板和 markdown 模板两类
 
 目前提供模板如下：
 
@@ -19,7 +19,7 @@
   - 使用 rollup 打包
 - markdowns: markdown 模板
 
-## 使用（以开发 react 组件为例）
+## Project 使用（以开发 react 组件为例）
 
 ### 一、安装本地命令
 
@@ -70,3 +70,11 @@ yarn dev // 运行webpack-dev-server
 最终显示如下:
 
 ![demo](https://store-g1.seewo.com/easiclass-public/646bd4cddc8344c5901ab10b29151f32)
+
+## Markdown
+
+生成每日工作计划模板
+
+```shell
+tpl -m 每日工作计划 -t m-ds
+```
