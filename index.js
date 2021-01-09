@@ -25,7 +25,13 @@ Code-Project-Example:
     tpl -p lib-demo -t lib-ts
 Markdown-Example:
   Daily Summary Example:
-    tpl -m ds -t m-ds
+    tpl -m ds-demo -t m-ds
+  Weekly Summary Example:
+    tpl -m ws-demo -t m-ws
+  Yearly Summary Example:
+    tpl -m ys-demo -t m-ys
+  Reading Summary Example:
+    tpl -m rs-demo -t m-rs
 `);
 });
 

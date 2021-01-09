@@ -32,6 +32,9 @@ class Generator {
      */
     this.markdownTemplateMap = {
       'm-ds': 'daily-summary',
+      'm-ws': 'weekly-summary',
+      'm-ys': 'yearly-summary',
+      'm-rs': 'reading-summary',
     };
     this.templateMap = { ...this.projectTemplateMap, ...this.markdownTemplateMap };
   }
