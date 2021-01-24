@@ -8,11 +8,7 @@ program
   .version('1.0.0', '-v, --version')
   .option('-m, --markdown <markdownName>', 'new Markdown', generator.createMarkdown.bind(generator))
   .option('-p, --project <projectName>', 'new Project', generator.createProject.bind(generator))
-  .option(
-    '-t, --template <templateName>',
-    'use template: rw-ts',
-    generator.generateTemplate.bind(generator)
-  );
+  .option('-t, --template <templateName>', 'use template: rw-ts', generator.generateTemplate.bind(generator));
 
 program.on('--help', function () {
   console.log(`
@@ -26,6 +22,8 @@ Code-Project-Example:
 Markdown-Example:
   Daily Summary Example:
     tpl -m ds-demo -t m-ds
+  Daily Summary Example (Table Version):
+    tpl -m ds-demo -t m-dst
   Weekly Summary Example:
     tpl -m ws-demo -t m-ws
   Yearly Summary Example:

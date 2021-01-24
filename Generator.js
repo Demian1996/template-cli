@@ -32,6 +32,7 @@ class Generator {
      */
     this.markdownTemplateMap = {
       'm-ds': 'daily-summary',
+      'm-dst': 'daily-summary-table',
       'm-ws': 'weekly-summary',
       'm-ys': 'yearly-summary',
       'm-rs': 'reading-summary',
@@ -73,11 +74,7 @@ class Generator {
           console.log('可用markdown模板如下：', Object.keys(this.markdownTemplateMap).join('/'));
           return;
         }
-        const srcPath = path.resolve(
-          __dirname,
-          './templates/markdowns',
-          this.templateMap[template] + '.md'
-        );
+        const srcPath = path.resolve(__dirname, './templates/markdowns', this.templateMap[template] + '.md');
         const targetPath = path.resolve(process.cwd(), this.targetName + '.md');
         // 生成文件
         mkfileSync(targetPath);
