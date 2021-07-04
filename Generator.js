@@ -1,9 +1,18 @@
 const { copyAllFiles, injectJson, mkdirSync, copyFile, mkfileSync } = require('./lib/copy');
 const path = require('path');
+const { MODE, projectTemplateMap, markdownTemplateMap } = require('./constant');
 
-const MODE = {
-  PROJECT: 'project',
-  MARKDOWN: 'markdown',
+/**
+ * @description { 't1': { value: 'template1', desc: 'description1'} } => { 't1': 'template1' }
+ */
+const templateAdapter = (templateMap) => {
+  return Object.keys(templateMap).reduce(
+    (prev, cur) => ({
+      ...prev,
+      [cur]: templateMap[cur].value,
+    }),
+    {}
+  );
 };
 
 /**
@@ -22,22 +31,11 @@ class Generator {
     /**
      * @description 项目模板文件映射
      */
-    this.projectTemplateMap = {
-      'rc-ts': 'react-component-typescript',
-      'rw-ts': 'react-web-typescript',
-      'lib-ts': 'library-typescript',
-    };
+    this.projectTemplateMap = templateAdapter(projectTemplateMap);
     /**
      * @description markdown模板文件映射
      */
-    this.markdownTemplateMap = {
-      'm-ds': 'daily-summary',
-      'm-dst': 'daily-summary-table',
-      'm-ws': 'weekly-summary',
-      'm-ys': 'yearly-summary',
-      'm-rs': 'reading-summary',
-      'm-scrs': 'source-code-reading-summary',
-    };
+    this.markdownTemplateMap = templateAdapter(markdownTemplateMap);
     this.templateMap = { ...this.projectTemplateMap, ...this.markdownTemplateMap };
   }
 

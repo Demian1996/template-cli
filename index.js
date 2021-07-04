@@ -1,14 +1,38 @@
 #!/usr/bin/env node
 const program = require('commander');
+const { MODE } = require('./constant');
 const Generator = require('./Generator');
+const prompt = require('./prompt');
 
 const generator = new Generator();
 
+program.version('1.0.0', '-v, --version');
+
 program
-  .version('1.0.0', '-v, --version')
+  .command('create')
   .option('-m, --markdown <markdownName>', 'new Markdown', generator.createMarkdown.bind(generator))
   .option('-p, --project <projectName>', 'new Project', generator.createProject.bind(generator))
   .option('-t, --template <templateName>', 'use template: rw-ts', generator.generateTemplate.bind(generator));
+
+program
+  .command('cli')
+  .description('初始化项目')
+  .action(async () => {
+    try {
+      const mode = await prompt.askMode();
+      const createFileMethod =
+        mode === MODE.PROJECT ? generator.createProject.bind(generator) : generator.createMarkdown.bind(generator);
+      console.log(mode);
+      const targetName = await prompt.askTargetName();
+      createFileMethod(targetName);
+      console.log(targetName);
+      const template = await prompt.askSelectWhichTemplate();
+      console.log(template);
+      generator.generateTemplate(template);
+    } catch (error) {
+      console.log('执行出错', error.message);
+    }
+  });
 
 program.on('--help', function () {
   console.log(`
