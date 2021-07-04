@@ -36,6 +36,7 @@ class Generator {
       'm-ws': 'weekly-summary',
       'm-ys': 'yearly-summary',
       'm-rs': 'reading-summary',
+      'm-scrs': 'source-code-reading-summary',
     };
     this.templateMap = { ...this.projectTemplateMap, ...this.markdownTemplateMap };
   }

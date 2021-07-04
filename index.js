@@ -30,6 +30,8 @@ Markdown-Example:
     tpl -m ys-demo -t m-ys
   Reading Summary Example:
     tpl -m rs-demo -t m-rs
+  Source Code Reading Summary Example:
+    tpl -m scrs-demo -t m-scrs
 `);
 });
 
