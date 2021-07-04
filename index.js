@@ -6,7 +6,7 @@ const prompt = require('./prompt');
 
 const generator = new Generator();
 
-program.version('1.0.0', '-v, --version');
+program.version('1.1.0', '-v, --version');
 
 program
   .command('create')
