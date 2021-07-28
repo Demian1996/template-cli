@@ -23,7 +23,9 @@ module.exports = smp.wrap(
     },
     plugins: [
       // 指定构建变量
-      // new webpack.DefinePlugin({}),
+      new webpack.DefinePlugin({
+        VERSION: JSON.stringify('1.1.1'),
+      }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, '../template/index.html'),
         filename: path.resolve(__dirname, '../dist/index.html'),

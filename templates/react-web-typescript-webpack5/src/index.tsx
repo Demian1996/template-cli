@@ -4,6 +4,7 @@ import { Button } from 'antd';
 import './index.less';
 
 function App() {
+  console.log(VERSION);
   return (
     <div styleName="container">
       <h1>Hello world!</h1>
