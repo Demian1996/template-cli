@@ -93,7 +93,8 @@ class Generator {
    */
   _handlePackageJSON({ targetPath, targetName, template }) {
     switch (template) {
-      case 'rw-ts': {
+      case 'rw-ts':
+      case 'rw-ts-w5': {
         return injectJson(path.resolve(targetPath, './package.json'), { name: targetName });
       }
       case 'rc-ts': {

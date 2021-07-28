@@ -36,9 +36,13 @@ program
 
 program.on('--help', function () {
   console.log(`
+Use Cli:
+  tpl cli
 Code-Project-Example:
   React Web Example:
     tpl -p rw-demo -t rw-ts
+  React Web Example:
+    tpl -p rw-demo -t rw-ts-w5
   React Component Example:
     tpl -p rc-demo -t rc-ts
   Library Example:

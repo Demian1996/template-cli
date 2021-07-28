@@ -12,6 +12,7 @@ const MODE = {
 const projectTemplateMap = {
   'rc-ts': { value: 'react-component-typescript', desc: 'react组件模板-ts' },
   'rw-ts': { value: 'react-web-typescript', desc: 'web项目模板-react、ts' },
+  'rw-ts-w5': { value: 'react-web-typescript-webpack5', desc: 'web项目模板-react、ts、webpack5' },
   'lib-ts': { value: 'library-typescript', desc: '工具库模板-rollup、ts' },
 };
 

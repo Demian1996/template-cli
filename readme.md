@@ -7,7 +7,11 @@
 - rw-ts（react-web-typescript）
   特性：
   - 集成 antd、react-css-modules、less、typescript、babel
-  - 使用 webpack 打包
+  - 使用 webpack4 打包
+- rw-ts-w5（react-web-typescript）
+  特性：
+  - 同上
+  - 使用 webpack5 打包
 - rc-ts (react-component-typescript)
   特性：
   - 集成 antd、react-css-modules、less、typescript、babel
