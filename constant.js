@@ -14,6 +14,7 @@ const projectTemplateMap = {
   'rw-ts': { value: 'react-web-typescript', desc: 'web项目模板-react、ts' },
   'rw-ts-w5': { value: 'react-web-typescript-webpack5', desc: 'web项目模板-react、ts、webpack5' },
   'lib-ts': { value: 'library-typescript', desc: '工具库模板-rollup、ts' },
+  'lib-ts-w5': { value: 'library-typescript-webpack5', desc: '工具库模板-webpack、ts' },
 };
 
 /**

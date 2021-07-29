@@ -47,6 +47,8 @@ Code-Project-Example:
     tpl -p rc-demo -t rc-ts
   Library Example:
     tpl -p lib-demo -t lib-ts
+  Library Example:
+    tpl -p lib-demo -t lib-ts-w5
 Markdown-Example:
   Daily Summary Example:
     tpl -m ds-demo -t m-ds

@@ -105,7 +105,8 @@ class Generator {
           types: 'types/index.d.ts',
         });
       }
-      case 'lib-ts': {
+      case 'lib-ts':
+      case 'lib-ts-w5': {
         return injectJson(path.resolve(targetPath, './package.json'), {
           name: targetName,
           main: `lib/${targetName}.js`,

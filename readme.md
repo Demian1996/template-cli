@@ -21,6 +21,11 @@
   - 支持 esm、cjs、umd 等形式
   - 集成 typescript、babel
   - 使用 rollup 打包
+- lib-ts-w5（library-typescript-webpack5）
+  特性：
+  - 支持 esm、cjs、umd 等形式
+  - 集成 typescript、babel
+  - 使用 webpack5 打包
 - markdowns: markdown 模板
 
 ## 一、Project 使用（以开发 react 组件为例）

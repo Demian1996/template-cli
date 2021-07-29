@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "esm",
+    "src",
+    "types"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-typescript": "^7.14.5",
+    "@babel/runtime-corejs3": "^7.14.8",
+    "@types/webpack-env": "^1.16.2",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.3.2",
+    "rimraf": "^3.0.2",
+    "speed-measure-webpack-plugin": "^1.5.0",
+    "webpack": "^5.47.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "emit-declaration": "tsc --declaration --emitDeclarationOnly",
+    "clean": "rimraf lib dist esm types",
+    "example": "webpack server --config ./webpack/webpack.example.js",
+    "build:cjs": "npm run clean && npm run emit-declaration && cross-env NODE_ENV=development webpack --config ./webpack/webpack.cjs.js",
+    "build:esm": "npm run clean && npm run emit-declaration && cross-env NODE_ENV=development webpack --config ./webpack/webpack.es.js",
+    "build:umd": "npm run clean && npm run emit-declaration && cross-env NODE_ENV=development webpack --config ./webpack/webpack.umd.js",
+    "build": "npm run clean && npm run emit-declaration && cross-env NODE_ENV=production webpack --config ./webpack/webpack.cjs.js && cross-env NODE_ENV=production webpack --config ./webpack/webpack.es.js && cross-env NODE_ENV=production webpack --config ./webpack/webpack.umd.js"
+  }
+}
