@@ -1,10 +1,10 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
+    clean: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -46,7 +46,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin()],
   optimization: {
     splitChunks: {
       cacheGroups: {
